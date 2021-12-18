@@ -74,15 +74,3 @@ def analyze(request):
 
     else:
         return HttpResponse(" <br> <h1> Please select any Operation and try again !!!! </h1> <br> <h1> <a href = '/'> Home Page </a> </h1>")
-
-# def capitalize(request):
-#     return HttpResponse("Capitalize First <br> <a href='/'> Back to home page </a>")
-#
-# def newlineremove(request):
-#     return HttpResponse("New Line Remover <br> <a href='/'> Back to home page </a>")
-#
-# def spaceremover(request):
-#     return HttpResponse("Space Remover <br> <a href='/'> Back to home page </a>")
-#
-# def charcount(request):
-#     return HttpResponse("Character Count <br> <a href='/'> Back to home page </a>")
