@@ -5,8 +5,7 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html')
-    # return HttpResponse("Home")
-
+ 
 def analyze(request):
     # Get the text
     djtext = request.POST.get('text', 'default')
@@ -29,7 +28,6 @@ def analyze(request):
                 analyzed = analyzed + i
         params = {'purpose' : 'Remove Punctuations', 'analyzed_text' : analyzed}
         djtext = analyzed
-        # return render(request, 'analyze.html', params)
 
     if fullcaps == 'on':
         counter = 1
@@ -38,7 +36,6 @@ def analyze(request):
             analyzed = analyzed + i.upper()
         params = {'purpose': 'Full Capitalize', 'analyzed_text': analyzed}
         djtext = analyzed
-        # return render(request, 'analyze.html', params)
 
     if newlineremover == 'on':
         counter = 1
@@ -48,7 +45,6 @@ def analyze(request):
                 analyzed = analyzed + i
         params = {'purpose': 'New Line Remove', 'analyzed_text': analyzed}
         djtext = analyzed
-        # return render(request, 'analyze.html', params)
 
     if spaceremover == 'on':
         counter = 1
@@ -58,7 +54,6 @@ def analyze(request):
                 analyzed = analyzed + char
         params = {'purpose': 'Extra Space Remove', 'analyzed_text': analyzed}
         djtext = analyzed
-        # return render(request, 'analyze.html', params)
 
     if charcount == 'on':
         counter = 1
